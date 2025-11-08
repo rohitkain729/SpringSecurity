@@ -12,6 +12,8 @@
 	<br>
 	<br>
 	<a href="./">Home</a>
+	<br><br>
+	<a href="/logout">singout</a>
 
 </body>
 </html>

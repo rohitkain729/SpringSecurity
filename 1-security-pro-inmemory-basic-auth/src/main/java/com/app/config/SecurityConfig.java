@@ -31,6 +31,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.anyRequest().authenticated()
 		.and()
 		.formLogin()// for form based authentication
+		.and()
+		.logout()
+		.logoutSuccessUrl("/bank/")
 		.and().exceptionHandling().accessDeniedPage("/bank/denied");// for configuring custom page,for autherization failure
 		//; basic authentication uses the browser geneated dailog box for asking user name and password		
 //		.httpBasic()
