@@ -46,7 +46,7 @@ public class User {
 	@Size(max = 40)
 	private String email;
 
-	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinTable(joinColumns = @JoinColumn(name = "user_id_fk"), inverseJoinColumns = @JoinColumn(name = "roles_id_fk"))
 	private Set<Roles> roles = new HashSet<>();
 
